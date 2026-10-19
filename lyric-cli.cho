@@ -4,7 +4,7 @@ version = "1.0.0"
 description = "Print a random lyric from your configured artists."
 license = "MIT"
 homepage = "https://github.com/JustOMORI7/lyric-cli"
-platforms = ["macos"]
+platforms = ["linux", "macos"]
 architectures = ["arm64", "x86_64"]
 dependencies = ["requests==2.32.5", "pykakasi==2.3.0"]
 
