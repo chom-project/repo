@@ -1,0 +1,63 @@
+format = 1
+name = "hyperfine"
+version = "2.0.0"
+description = "Command-line benchmarking tool"
+license = "Apache-2.0 OR MIT"
+homepage = "https://github.com/sharkdp/hyperfine"
+platforms = ["linux", "macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/sharkdp/hyperfine/releases/download/v2.0.0/hyperfine-v2.0.0-x86_64-unknown-linux-gnu.tar.gz"
+sha256 = "ae2beda2ac99c098427e4f755244552daf20e514422889cca6d44421e2d93c87"
+archive = "tar.gz"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"hyperfine" = "hyperfine-v2.0.0-x86_64-unknown-linux-gnu/hyperfine"
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.x86_64.source]
+url = "https://github.com/sharkdp/hyperfine/releases/download/v2.0.0/hyperfine-v2.0.0-x86_64-unknown-linux-gnu.tar.gz"
+sha256 = "ae2beda2ac99c098427e4f755244552daf20e514422889cca6d44421e2d93c87"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.linux.x86_64.install.launchers]
+"hyperfine" = "hyperfine-v2.0.0-x86_64-unknown-linux-gnu/hyperfine"
+
+[platform.linux.arm64.source]
+url = "https://github.com/sharkdp/hyperfine/releases/download/v2.0.0/hyperfine-v2.0.0-aarch64-unknown-linux-gnu.tar.gz"
+sha256 = "f8244d1e17f8da23ee6b3ae2cdc04a6a185a450f6b74e09bff12e498038fcbc9"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.linux.arm64.install.launchers]
+"hyperfine" = "hyperfine-v2.0.0-aarch64-unknown-linux-gnu/hyperfine"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/sharkdp/hyperfine/releases/download/v2.0.0/hyperfine-v2.0.0-x86_64-apple-darwin.tar.gz"
+sha256 = "8afe204926afefa406ad320cef0672b739e5f676c623fbd6d43d779bacd684e3"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"hyperfine" = "hyperfine-v2.0.0-x86_64-apple-darwin/hyperfine"
+
+[platform.macos.arm64.source]
+url = "https://github.com/sharkdp/hyperfine/releases/download/v2.0.0/hyperfine-v2.0.0-aarch64-apple-darwin.tar.gz"
+sha256 = "590b839cfea386b384ce0b42d16daf2910277cf30950656194bb3a5f20dea81e"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"hyperfine" = "hyperfine-v2.0.0-aarch64-apple-darwin/hyperfine"
+

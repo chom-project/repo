@@ -1,0 +1,33 @@
+format = 1
+name = "discord"
+version = "0.0.416"
+description = "Voice, video, and text chat app."
+license = "Proprietary"
+homepage = "https://discord.com/"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://dl.discordapp.net/apps/osx/0.0.416/Discord.dmg"
+sha256 = "9bcada2ac203337ec523930de5ace261c1839250bfd4e648999af93f5be9a646"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"discord" = "Discord.app"
+
+[platform.macos]
+architectures = ["x86_64"]
+
+[platform.macos.x86_64.source]
+url = "https://dl.discordapp.net/apps/osx/0.0.416/Discord.dmg"
+sha256 = "9bcada2ac203337ec523930de5ace261c1839250bfd4e648999af93f5be9a646"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"discord" = "Discord.app"
+

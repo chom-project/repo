@@ -1,0 +1,41 @@
+format = 1
+name = "whatsapp"
+version = "26.41.28"
+description = "Native desktop client for WhatsApp."
+license = "Proprietary"
+homepage = "https://www.whatsapp.com/"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.41.28&extension=zip&configuration=Release&branch=master&is_buck=true"
+sha256 = "2715ad0b9c74420de316cd32d662bfe25cab9ff812038d278ef844d3a1c3c353"
+archive = "zip"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"whatsapp" = "WhatsApp.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.41.28&extension=zip&configuration=Release&branch=master&is_buck=true"
+sha256 = "2715ad0b9c74420de316cd32d662bfe25cab9ff812038d278ef844d3a1c3c353"
+archive = "zip"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"whatsapp" = "WhatsApp.app"
+
+[platform.macos.arm64.source]
+url = "https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.41.28&extension=zip&configuration=Release&branch=master&is_buck=true"
+sha256 = "2715ad0b9c74420de316cd32d662bfe25cab9ff812038d278ef844d3a1c3c353"
+archive = "zip"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"whatsapp" = "WhatsApp.app"

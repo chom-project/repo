@@ -1,0 +1,63 @@
+format = 1
+name = "rclone"
+version = "1.75.2"
+description = "Command-line program to manage files on cloud storage"
+license = "MIT"
+homepage = "https://github.com/rclone/rclone"
+platforms = ["linux", "macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/rclone/rclone/releases/download/v1.75.2/rclone-v1.75.2-linux-amd64.zip"
+sha256 = "349ac8fba6ff65d6247043f1750cdcb518ec5d500ef91463a10d37c0ccdf3702"
+archive = "zip"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"rclone" = "rclone-v1.75.2-linux-amd64/rclone"
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.x86_64.source]
+url = "https://github.com/rclone/rclone/releases/download/v1.75.2/rclone-v1.75.2-linux-amd64.zip"
+sha256 = "349ac8fba6ff65d6247043f1750cdcb518ec5d500ef91463a10d37c0ccdf3702"
+archive = "zip"
+strip_components = 0
+
+[platform.linux.x86_64.install.launchers]
+"rclone" = "rclone-v1.75.2-linux-amd64/rclone"
+
+[platform.linux.arm64.source]
+url = "https://github.com/rclone/rclone/releases/download/v1.75.2/rclone-v1.75.2-linux-arm64.zip"
+sha256 = "7e1e8d69654941b7b7df84ee74c5f7fb09cce7d5496947fb7bf16b55ff427d10"
+archive = "zip"
+strip_components = 0
+
+[platform.linux.arm64.install.launchers]
+"rclone" = "rclone-v1.75.2-linux-arm64/rclone"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/rclone/rclone/releases/download/v1.75.2/rclone-v1.75.2-osx-amd64.zip"
+sha256 = "574e1f31cf1c464e5fb0325cb66fcbdeaf1efa1802bd9b17f13c256fd74b6561"
+archive = "zip"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"rclone" = "rclone-v1.75.2-osx-amd64/rclone"
+
+[platform.macos.arm64.source]
+url = "https://github.com/rclone/rclone/releases/download/v1.75.2/rclone-v1.75.2-osx-arm64.zip"
+sha256 = "610ab7d48615135dfc60b763858b11a426a0d3d1160c1bb76fb0ae6011b02edd"
+archive = "zip"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"rclone" = "rclone-v1.75.2-osx-arm64/rclone"
+

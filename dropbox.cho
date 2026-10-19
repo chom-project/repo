@@ -1,0 +1,41 @@
+format = 1
+name = "dropbox"
+version = "274.4.4905"
+description = "File sync and cloud storage client."
+license = "Proprietary"
+homepage = "https://www.dropbox.com/"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20274.4.4905.dmg"
+sha256 = "4f1c9b70a47ed57a2d45c3e37e0440465b08375785ea39321ba1e545635b3774"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"dropbox" = "Dropbox.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20274.4.4905.dmg"
+sha256 = "4f1c9b70a47ed57a2d45c3e37e0440465b08375785ea39321ba1e545635b3774"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"dropbox" = "Dropbox.app"
+
+[platform.macos.arm64.source]
+url = "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20274.4.4905.arm64.dmg"
+sha256 = "8371409c1941e7a5e425568ae7f1a765d1c54ab8bf0084c4d522b20866dd5644"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"dropbox" = "Dropbox.app"

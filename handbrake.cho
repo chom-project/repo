@@ -1,0 +1,63 @@
+format = 1
+name = "handbrake"
+version = "1.11.2"
+description = "Open-source video transcoder."
+license = "GPL-2.0-or-later"
+homepage = "https://handbrake.fr/"
+platforms = ["macos", "windows"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2.dmg"
+sha256 = "4afe27aaa77a7bbb0dcda1a335d96a5f53649f2649fb84de6982ffecc35de9d7"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"handbrake" = "HandBrake.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2.dmg"
+sha256 = "4afe27aaa77a7bbb0dcda1a335d96a5f53649f2649fb84de6982ffecc35de9d7"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"handbrake" = "HandBrake.app"
+
+[platform.macos.arm64.source]
+url = "https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2.dmg"
+sha256 = "4afe27aaa77a7bbb0dcda1a335d96a5f53649f2649fb84de6982ffecc35de9d7"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"handbrake" = "HandBrake.app"
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2-x86_64-Win_GUI.zip"
+sha256 = "a8b9e38b085da2ed7309868bdf8b49a900453946d25d58612071957f21eebd27"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install.launchers]
+"handbrake" = "HandBrake/HandBrake.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2-arm64-Win_GUI.zip"
+sha256 = "b5a9618de5c38b95a4e9161e8f5a20a06fbc1d1fefff6d65cc47438ba6d6a36a"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install.launchers]
+"handbrake" = "HandBrake/HandBrake.exe"
+

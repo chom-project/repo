@@ -1,0 +1,63 @@
+format = 1
+name = "zellij"
+version = "0.45.1"
+description = "Terminal workspace with batteries included"
+license = "MIT"
+homepage = "https://github.com/zellij-org/zellij"
+platforms = ["linux", "macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/zellij-org/zellij/releases/download/v0.45.1/zellij-no-web-x86_64-unknown-linux-musl.tar.gz"
+sha256 = "d7bda1e18c30a688833ae7627f1d6a253bbba5349a4bc48e4f0ec008aaf75ed1"
+archive = "tar.gz"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"zellij" = "zellij"
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.x86_64.source]
+url = "https://github.com/zellij-org/zellij/releases/download/v0.45.1/zellij-no-web-x86_64-unknown-linux-musl.tar.gz"
+sha256 = "d7bda1e18c30a688833ae7627f1d6a253bbba5349a4bc48e4f0ec008aaf75ed1"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.linux.x86_64.install.launchers]
+"zellij" = "zellij"
+
+[platform.linux.arm64.source]
+url = "https://github.com/zellij-org/zellij/releases/download/v0.45.1/zellij-no-web-aarch64-unknown-linux-musl.tar.gz"
+sha256 = "7c0725cd433299eaf171d673df3b8e7ceceae1b06f8265ba552ff3b9c3c82ea0"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.linux.arm64.install.launchers]
+"zellij" = "zellij"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/zellij-org/zellij/releases/download/v0.45.1/zellij-no-web-x86_64-apple-darwin.tar.gz"
+sha256 = "37a1b29f222722f9e7cca2bf506b6d9a816858b5ff80facdb03fd577a8cf08e3"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"zellij" = "zellij"
+
+[platform.macos.arm64.source]
+url = "https://github.com/zellij-org/zellij/releases/download/v0.45.1/zellij-no-web-aarch64-apple-darwin.tar.gz"
+sha256 = "78eb322772b92f0fe94c2dbd70477575959f0de0da5913176d49ec70639f79e0"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"zellij" = "zellij"
+

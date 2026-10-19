@@ -1,0 +1,42 @@
+format = 1
+name = "edge"
+version = "155.0.4283.62"
+description = "Microsoft web browser."
+license = "Proprietary"
+homepage = "https://www.microsoft.com/edge"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/709306ae-6f10-4efb-8abb-f6899182f264/MicrosoftEdge-155.0.4283.62.dmg"
+sha256 = "292b57f514917be89575d1e8a1126dec28757cb0c42467831687f2548be78b17"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"edge" = "Microsoft Edge.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/709306ae-6f10-4efb-8abb-f6899182f264/MicrosoftEdge-155.0.4283.62.dmg"
+sha256 = "292b57f514917be89575d1e8a1126dec28757cb0c42467831687f2548be78b17"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"edge" = "Microsoft Edge.app"
+
+[platform.macos.arm64.source]
+url = "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/709306ae-6f10-4efb-8abb-f6899182f264/MicrosoftEdge-155.0.4283.62.dmg"
+sha256 = "292b57f514917be89575d1e8a1126dec28757cb0c42467831687f2548be78b17"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"edge" = "Microsoft Edge.app"
+

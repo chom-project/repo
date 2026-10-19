@@ -1,0 +1,42 @@
+format = 1
+name = "brave"
+version = "1.97.59.0"
+description = "Privacy-focused web browser."
+license = "MPL-2.0"
+homepage = "https://brave.com/"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable/197.59/Brave-Browser-x64.dmg"
+sha256 = "1508f2c829033fb22d708bdab3a378867491cb742aa531604821ef371706c6c2"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"brave" = "Brave Browser.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable/197.59/Brave-Browser-x64.dmg"
+sha256 = "1508f2c829033fb22d708bdab3a378867491cb742aa531604821ef371706c6c2"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"brave" = "Brave Browser.app"
+
+[platform.macos.arm64.source]
+url = "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable-arm64/197.59/Brave-Browser-arm64.dmg"
+sha256 = "4129207d00e568c5dba080bb91cb3b92d5762600391a32b6debb8162518d6b06"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"brave" = "Brave Browser.app"
+

@@ -1,0 +1,42 @@
+format = 1
+name = "obs"
+version = "32.2.2"
+description = "Free software for video recording and live streaming."
+license = "GPL-2.0-or-later"
+homepage = "https://obsproject.com/"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://cdn-fastly.obsproject.com/downloads/obs-studio-32.2.2-macos-intel.dmg"
+sha256 = "f8d8afe3dffdc86efa0698c02ff0c997866bac3e6208ddaf56d37108baacf197"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"obs" = "OBS.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://cdn-fastly.obsproject.com/downloads/obs-studio-32.2.2-macos-intel.dmg"
+sha256 = "f8d8afe3dffdc86efa0698c02ff0c997866bac3e6208ddaf56d37108baacf197"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"obs" = "OBS.app"
+
+[platform.macos.arm64.source]
+url = "https://cdn-fastly.obsproject.com/downloads/obs-studio-32.2.2-macos-apple.dmg"
+sha256 = "920d6f26703d2df6e4085bd3c1cbed30488325084136c7a6e9e37021fbd6aaf7"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"obs" = "OBS.app"
+

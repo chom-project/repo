@@ -1,0 +1,75 @@
+format = 1
+name = "helix"
+version = "25.07.1"
+description = "Fast, lightweight, terminal-based text editor."
+license = "MPL-2.0"
+homepage = "https://helix-editor.com/"
+platforms = ["linux", "macos", "windows"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-aarch64-macos.tar.xz"
+sha256 = "00b1651b4fdbbe0a2ae981c8e76b858bd26a7c33f5b3583f3b6bb9137d54f1ff"
+archive = "tar.xz"
+strip_components = 1
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"hx" = "hx"
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.x86_64.source]
+url = "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-x86_64-linux.tar.xz"
+sha256 = "3f08e63ecd388fff657ad39722f88bb03dcf326f1f2da2700d99e1dc40ab2e8b"
+archive = "tar.xz"
+strip_components = 1
+
+[platform.linux.x86_64.install.launchers]
+"hx" = "hx"
+
+[platform.linux.arm64.source]
+url = "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-aarch64-linux.tar.xz"
+sha256 = "ce23fa8d395e633e3e54c052012f11965d91d8d5c2bfa659685f50430b4f8175"
+archive = "tar.xz"
+strip_components = 1
+
+[platform.linux.arm64.install.launchers]
+"hx" = "hx"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-x86_64-macos.tar.xz"
+sha256 = "84dc32d617d28d32f4aa21e3aafac47bd715d1154aeb977697d4d60b887b7103"
+archive = "tar.xz"
+strip_components = 1
+
+[platform.macos.x86_64.install.launchers]
+"hx" = "hx"
+
+[platform.macos.arm64.source]
+url = "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-aarch64-macos.tar.xz"
+sha256 = "00b1651b4fdbbe0a2ae981c8e76b858bd26a7c33f5b3583f3b6bb9137d54f1ff"
+archive = "tar.xz"
+strip_components = 1
+
+[platform.macos.arm64.install.launchers]
+"hx" = "hx"
+
+[platform.windows]
+architectures = ["x86_64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-x86_64-windows.zip"
+sha256 = "5c8325ced8bacd8418d62706f669e96d9c3578a9237526e34d546900cbc049b6"
+archive = "zip"
+strip_components = 1
+
+[platform.windows.x86_64.install.launchers]
+"hx" = "hx.exe"
+

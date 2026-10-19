@@ -1,0 +1,41 @@
+format = 1
+name = "bitwarden"
+version = "2026.10.0"
+description = "Password manager and secure vault."
+license = "GPL-3.0-or-later"
+homepage = "https://bitwarden.com/"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/bitwarden/clients/releases/download/desktop-v2026.10.0/Bitwarden-2026.10.0-universal.dmg"
+sha256 = "24920c56d9464ad3de6e50eb78399641cf79eb006eb3f46885a49f85632cb96a"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"bitwarden" = "Bitwarden.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/bitwarden/clients/releases/download/desktop-v2026.10.0/Bitwarden-2026.10.0-universal.dmg"
+sha256 = "24920c56d9464ad3de6e50eb78399641cf79eb006eb3f46885a49f85632cb96a"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"bitwarden" = "Bitwarden.app"
+
+[platform.macos.arm64.source]
+url = "https://github.com/bitwarden/clients/releases/download/desktop-v2026.10.0/Bitwarden-2026.10.0-universal.dmg"
+sha256 = "24920c56d9464ad3de6e50eb78399641cf79eb006eb3f46885a49f85632cb96a"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"bitwarden" = "Bitwarden.app"

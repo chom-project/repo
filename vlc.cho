@@ -1,0 +1,54 @@
+format = 1
+name = "vlc"
+version = "3.0.24"
+description = "Free and open-source multimedia player."
+license = "GPL-2.0-or-later"
+homepage = "https://www.videolan.org/vlc/"
+platforms = ["macos", "windows"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://get.videolan.org/vlc/3.0.24/macosx/vlc-3.0.24-intel64.dmg"
+sha256 = "1ef6c903e2dc026d4e58ddf7b2a9ed0eb6f8caf80a9a9f46f96490340b962707"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"vlc" = "VLC.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://get.videolan.org/vlc/3.0.24/macosx/vlc-3.0.24-intel64.dmg"
+sha256 = "1ef6c903e2dc026d4e58ddf7b2a9ed0eb6f8caf80a9a9f46f96490340b962707"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"vlc" = "VLC.app"
+
+[platform.macos.arm64.source]
+url = "https://get.videolan.org/vlc/3.0.24/macosx/vlc-3.0.24-arm64.dmg"
+sha256 = "64a89d93cdd30b0e97131743e246373db82d6826ea882d265d46d74b136da2b7"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"vlc" = "VLC.app"
+
+[platform.windows]
+architectures = ["x86_64"]
+
+[platform.windows.x86_64.source]
+url = "https://download.videolan.org/pub/videolan/vlc/last/win64/vlc-3.0.24-win64.zip"
+sha256 = "fcf30850371ad10c9373cc4f0f4501e7dee49e3e9ae9f20c72fb2661a1ca6323"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install.launchers]
+"vlc" = "vlc-3.0.24/vlc.exe"
+

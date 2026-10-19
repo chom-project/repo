@@ -1,0 +1,42 @@
+format = 1
+name = "mpv"
+version = "0.41.0"
+description = "Free, open-source media player."
+license = "GPL-2.0-or-later"
+homepage = "https://mpv.io/"
+platforms = ["windows"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/mpv-player/mpv/releases/download/v0.41.0/mpv-v0.41.0-x86_64-pc-windows-msvc.zip"
+sha256 = "4e197f729f5071c6772f35fffd96e0f36e3e8a044bd9479b136bb09b7c6a80ff"
+archive = "zip"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"mpv" = "mpv.exe"
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/mpv-player/mpv/releases/download/v0.41.0/mpv-v0.41.0-x86_64-pc-windows-msvc.zip"
+sha256 = "4e197f729f5071c6772f35fffd96e0f36e3e8a044bd9479b136bb09b7c6a80ff"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install.launchers]
+"mpv" = "mpv.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/mpv-player/mpv/releases/download/v0.41.0/mpv-v0.41.0-aarch64-pc-windows-msvc.zip"
+sha256 = "a822abeffd0ac88951f4084f3425f949842aa17d616f880637ebe9041e482e97"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install.launchers]
+"mpv" = "mpv.exe"
+

@@ -1,0 +1,41 @@
+format = 1
+name = "obsidian"
+version = "1.14.4"
+description = "Notes and knowledge base built around Markdown files."
+license = "Proprietary"
+homepage = "https://obsidian.md/"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.14.4/Obsidian-1.14.4.dmg"
+sha256 = "dcf818dd20ee5d9dd3e782eee0c0c4c47cc225383b051c2fc9af7d5772f59f70"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"obsidian" = "Obsidian.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.14.4/Obsidian-1.14.4.dmg"
+sha256 = "dcf818dd20ee5d9dd3e782eee0c0c4c47cc225383b051c2fc9af7d5772f59f70"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"obsidian" = "Obsidian.app"
+
+[platform.macos.arm64.source]
+url = "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.14.4/Obsidian-1.14.4.dmg"
+sha256 = "dcf818dd20ee5d9dd3e782eee0c0c4c47cc225383b051c2fc9af7d5772f59f70"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"obsidian" = "Obsidian.app"

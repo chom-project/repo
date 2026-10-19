@@ -1,0 +1,41 @@
+format = 1
+name = "telegram"
+version = "13.0.283305"
+description = "Fast, cloud-based messaging app."
+license = "Proprietary"
+homepage = "https://macos.telegram.org/"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://osx.telegram.org/updates/Telegram-13.0.283305.app.zip"
+sha256 = "eae378083774b6d379c328c71989b764fa960e5e4265236e0fc58b8a08014a64"
+archive = "zip"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"telegram" = "Telegram.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://osx.telegram.org/updates/Telegram-13.0.283305.app.zip"
+sha256 = "eae378083774b6d379c328c71989b764fa960e5e4265236e0fc58b8a08014a64"
+archive = "zip"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"telegram" = "Telegram.app"
+
+[platform.macos.arm64.source]
+url = "https://osx.telegram.org/updates/Telegram-13.0.283305.app.zip"
+sha256 = "eae378083774b6d379c328c71989b764fa960e5e4265236e0fc58b8a08014a64"
+archive = "zip"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"telegram" = "Telegram.app"

@@ -1,0 +1,42 @@
+format = 1
+name = "audacity"
+version = "4.0.1"
+description = "Free audio editor and recorder."
+license = "GPL-3.0-or-later"
+homepage = "https://www.audacityteam.org/"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/audacity/audacity/releases/download/Audacity-4.0.1/audacity-macOS-4.0.1-x86_64.dmg"
+sha256 = "9794b0b3a3a795bdc097b411a5776ba59dc451cb1524f58c9714c30cca2564be"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"audacity" = "Audacity 4.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/audacity/audacity/releases/download/Audacity-4.0.1/audacity-macOS-4.0.1-x86_64.dmg"
+sha256 = "9794b0b3a3a795bdc097b411a5776ba59dc451cb1524f58c9714c30cca2564be"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"audacity" = "Audacity 4.app"
+
+[platform.macos.arm64.source]
+url = "https://github.com/audacity/audacity/releases/download/Audacity-4.0.1/audacity-macOS-4.0.1-arm64.dmg"
+sha256 = "278c8647b78c77af7f07dbd5e7d9bfc950bc14168047b65738716b61d12055ec"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"audacity" = "Audacity 4.app"
+

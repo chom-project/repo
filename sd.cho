@@ -1,0 +1,63 @@
+format = 1
+name = "sd"
+version = "1.1.0"
+description = "Intuitive find-and-replace command-line tool"
+license = "MIT"
+homepage = "https://github.com/chmln/sd"
+platforms = ["linux", "macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/chmln/sd/releases/download/v1.1.0/sd-v1.1.0-x86_64-unknown-linux-gnu.tar.gz"
+sha256 = "3613eca74cd686739bb5a6d68319aa56c747e7315274d02323a2ca2b1c5d82d2"
+archive = "tar.gz"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"sd" = "sd-v1.1.0-x86_64-unknown-linux-gnu/sd"
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.x86_64.source]
+url = "https://github.com/chmln/sd/releases/download/v1.1.0/sd-v1.1.0-x86_64-unknown-linux-gnu.tar.gz"
+sha256 = "3613eca74cd686739bb5a6d68319aa56c747e7315274d02323a2ca2b1c5d82d2"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.linux.x86_64.install.launchers]
+"sd" = "sd-v1.1.0-x86_64-unknown-linux-gnu/sd"
+
+[platform.linux.arm64.source]
+url = "https://github.com/chmln/sd/releases/download/v1.1.0/sd-v1.1.0-aarch64-unknown-linux-musl.tar.gz"
+sha256 = "ec8c93c0533ff21f4851d11566808d4082544baf063d9b96ea77c27e98b7cd99"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.linux.arm64.install.launchers]
+"sd" = "sd-v1.1.0-aarch64-unknown-linux-musl/sd"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/chmln/sd/releases/download/v1.1.0/sd-v1.1.0-x86_64-apple-darwin.tar.gz"
+sha256 = "1fca1e9c91813a8aac6821063c923107ba0f66a83309e095edcd3b202f67f97e"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"sd" = "sd-v1.1.0-x86_64-apple-darwin/sd"
+
+[platform.macos.arm64.source]
+url = "https://github.com/chmln/sd/releases/download/v1.1.0/sd-v1.1.0-aarch64-apple-darwin.tar.gz"
+sha256 = "4bd3c09226376ca0a1d69589c91e86276fae36c5fbaaee669afce583f6682030"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"sd" = "sd-v1.1.0-aarch64-apple-darwin/sd"
+

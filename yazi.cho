@@ -1,0 +1,68 @@
+format = 1
+name = "yazi"
+version = "26.9.1"
+description = "Blazing fast terminal file manager"
+license = "MIT"
+homepage = "https://github.com/sxyazi/yazi"
+platforms = ["linux", "macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/sxyazi/yazi/releases/download/v26.9.1/yazi-x86_64-unknown-linux-gnu.zip"
+sha256 = "a02fe91d3304294048c681f010f1100856872a4e98ecf6927328e888d40a6ad2"
+archive = "zip"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"yazi" = "yazi-x86_64-unknown-linux-gnu/yazi"
+"ya" = "yazi-x86_64-unknown-linux-gnu/ya"
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.x86_64.source]
+url = "https://github.com/sxyazi/yazi/releases/download/v26.9.1/yazi-x86_64-unknown-linux-gnu.zip"
+sha256 = "a02fe91d3304294048c681f010f1100856872a4e98ecf6927328e888d40a6ad2"
+archive = "zip"
+strip_components = 0
+
+[platform.linux.x86_64.install.launchers]
+"yazi" = "yazi-x86_64-unknown-linux-gnu/yazi"
+"ya" = "yazi-x86_64-unknown-linux-gnu/ya"
+
+[platform.linux.arm64.source]
+url = "https://github.com/sxyazi/yazi/releases/download/v26.9.1/yazi-aarch64-unknown-linux-gnu.zip"
+sha256 = "02807f08d6b589b65b7516a4e259d83f5995d7a23bb12b3a155141385b370b3a"
+archive = "zip"
+strip_components = 0
+
+[platform.linux.arm64.install.launchers]
+"yazi" = "yazi-aarch64-unknown-linux-gnu/yazi"
+"ya" = "yazi-aarch64-unknown-linux-gnu/ya"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/sxyazi/yazi/releases/download/v26.9.1/yazi-x86_64-apple-darwin.zip"
+sha256 = "36e09036fcc446488d876d139a5e303f2443b82cfb6ac7dfcb43892d6fe6fa20"
+archive = "zip"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"yazi" = "yazi-x86_64-apple-darwin/yazi"
+"ya" = "yazi-x86_64-apple-darwin/ya"
+
+[platform.macos.arm64.source]
+url = "https://github.com/sxyazi/yazi/releases/download/v26.9.1/yazi-aarch64-apple-darwin.zip"
+sha256 = "3921182a21cceb0a505e5dac578e1487d48104caa5f114e9f8adf40b5a7289a9"
+archive = "zip"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"yazi" = "yazi-aarch64-apple-darwin/yazi"
+"ya" = "yazi-aarch64-apple-darwin/ya"
+

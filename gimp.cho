@@ -1,0 +1,41 @@
+format = 1
+name = "gimp"
+version = "3.2.6"
+description = "Free image editor."
+license = "GPL-3.0-or-later"
+homepage = "https://www.gimp.org/"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://download.gimp.org/gimp/v3.2/macos/gimp-3.2.6-x86_64.dmg"
+sha256 = "ebe633642445d4d6fc6b68e7be7ca581c0b28c18dc9de7747849528c982e5677"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"gimp" = "GIMP.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://download.gimp.org/gimp/v3.2/macos/gimp-3.2.6-x86_64.dmg"
+sha256 = "ebe633642445d4d6fc6b68e7be7ca581c0b28c18dc9de7747849528c982e5677"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"gimp" = "GIMP.app"
+
+[platform.macos.arm64.source]
+url = "https://download.gimp.org/gimp/v3.2/macos/gimp-3.2.6-arm64.dmg"
+sha256 = "854573aec2be6a185aa021109c3c0ca94f210379204b704231bdd191b4060294"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"gimp" = "GIMP.app"

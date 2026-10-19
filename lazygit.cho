@@ -1,0 +1,51 @@
+format = 1
+name = "lazygit"
+version = "0.66.2"
+description = "Simple terminal UI for git commands."
+license = "MIT"
+homepage = "https://github.com/jesseduffield/lazygit"
+platforms = ["linux", "macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.66.2/lazygit_0.66.2_linux_x86_64.tar.gz"
+sha256 = "158efc9ddfa1241fab5fb3526bb442c8dc6c4b1904d73213b9e4e93e03c52034"
+archive = "tar.gz"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install]
+binaries = ["lazygit"]
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.x86_64.source]
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.66.2/lazygit_0.66.2_linux_x86_64.tar.gz"
+sha256 = "158efc9ddfa1241fab5fb3526bb442c8dc6c4b1904d73213b9e4e93e03c52034"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.linux.arm64.source]
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.66.2/lazygit_0.66.2_linux_arm64.tar.gz"
+sha256 = "79a3161eeb642f0473e23db6341f7baabd4a5933e921a9c1167c5d5c765c41a4"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.66.2/lazygit_0.66.2_darwin_x86_64.tar.gz"
+sha256 = "de5d3771e4befa6fe17590e21445614998adc1ef34a71f4003df6764247517ab"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.macos.arm64.source]
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.66.2/lazygit_0.66.2_darwin_arm64.tar.gz"
+sha256 = "fadda59ae7665ba556fcbaa704c7eade6e40d016d3f3b25d6327dd1f3f906a0c"
+archive = "tar.gz"
+strip_components = 0
+

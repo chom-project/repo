@@ -1,0 +1,42 @@
+format = 1
+name = "signal"
+version = "8.31.0"
+description = "Private messaging and voice calls."
+license = "AGPL-3.0-only"
+homepage = "https://signal.org/"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://updates.signal.org/desktop/signal-desktop-mac-x64-8.31.0.zip"
+sha256 = "1458b5fbfab36b2191831959e7aa95a4b4bf60db75b55af41a0dd0977023f84b"
+archive = "zip"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"signal" = "Signal.app"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://updates.signal.org/desktop/signal-desktop-mac-x64-8.31.0.zip"
+sha256 = "1458b5fbfab36b2191831959e7aa95a4b4bf60db75b55af41a0dd0977023f84b"
+archive = "zip"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"signal" = "Signal.app"
+
+[platform.macos.arm64.source]
+url = "https://updates.signal.org/desktop/signal-desktop-mac-arm64-8.31.0.zip"
+sha256 = "1bba76ba19125e936044bb43d79f979671d2947470502a0c213e001182fa5f6c"
+archive = "zip"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"signal" = "Signal.app"
+

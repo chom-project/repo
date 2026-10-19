@@ -1,0 +1,44 @@
+format = 1
+name = "vim"
+version = "9.2.321"
+description = "Vim text editor for macOS, packaged with MacVim."
+license = "Vim"
+homepage = "https://github.com/macvim-dev/macvim"
+platforms = ["macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/macvim-dev/macvim/releases/download/release-183/MacVim.dmg"
+sha256 = "c27fb8948328074dcb81f45b7d88ff4e123a86c06eaf3d5b330369bc39ffab69"
+archive = "dmg"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"vim" = "MacVim.app/Contents/bin/mvim"
+"mvim" = "MacVim.app/Contents/bin/mvim"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/macvim-dev/macvim/releases/download/release-183/MacVim.dmg"
+sha256 = "c27fb8948328074dcb81f45b7d88ff4e123a86c06eaf3d5b330369bc39ffab69"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"vim" = "MacVim.app/Contents/bin/mvim"
+"mvim" = "MacVim.app/Contents/bin/mvim"
+
+[platform.macos.arm64.source]
+url = "https://github.com/macvim-dev/macvim/releases/download/release-183/MacVim.dmg"
+sha256 = "c27fb8948328074dcb81f45b7d88ff4e123a86c06eaf3d5b330369bc39ffab69"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"vim" = "MacVim.app/Contents/bin/mvim"
+"mvim" = "MacVim.app/Contents/bin/mvim"

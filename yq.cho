@@ -1,0 +1,63 @@
+format = 1
+name = "yq"
+version = "4.54.1"
+description = "Portable command-line YAML, JSON, XML, CSV, TOML and properties processor"
+license = "MIT"
+homepage = "https://github.com/mikefarah/yq"
+platforms = ["linux", "macos"]
+architectures = ["x86_64", "arm64"]
+
+[source]
+url = "https://github.com/mikefarah/yq/releases/download/v4.54.1/yq_linux_amd64.tar.gz"
+sha256 = "e68a456f90c577af3fe4960184b3a3cf5c461e0348407c10f107da3a5fec8972"
+archive = "tar.gz"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+"yq" = "yq_linux_amd64"
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.x86_64.source]
+url = "https://github.com/mikefarah/yq/releases/download/v4.54.1/yq_linux_amd64.tar.gz"
+sha256 = "e68a456f90c577af3fe4960184b3a3cf5c461e0348407c10f107da3a5fec8972"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.linux.x86_64.install.launchers]
+"yq" = "yq_linux_amd64"
+
+[platform.linux.arm64.source]
+url = "https://github.com/mikefarah/yq/releases/download/v4.54.1/yq_linux_arm64.tar.gz"
+sha256 = "8c27f6e7476fb5acefb9352e3d30f6bc2dc93f1956eb92e8da727173fb7ec6d3"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.linux.arm64.install.launchers]
+"yq" = "yq_linux_arm64"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://github.com/mikefarah/yq/releases/download/v4.54.1/yq_darwin_amd64.tar.gz"
+sha256 = "b2cc367e9f5491b3b9b191aa19ba3a3163daf99d84f90bc7bd8918010a66e69a"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+"yq" = "yq_darwin_amd64"
+
+[platform.macos.arm64.source]
+url = "https://github.com/mikefarah/yq/releases/download/v4.54.1/yq_darwin_arm64.tar.gz"
+sha256 = "60d0c91aa8bf4030d38e80bb05f84c20be2e955f24d62b2e55d15ad643fa7afa"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+"yq" = "yq_darwin_arm64"
+
