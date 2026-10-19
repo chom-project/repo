@@ -1,0 +1,73 @@
+format = 1
+name = "vscode"
+version = "1.142.0"
+description = "Visual Studio Code desktop editor."
+license = "Microsoft Visual Studio Code License"
+homepage = "https://code.visualstudio.com/"
+platforms = ["linux", "macos", "windows"]
+
+[source]
+url = "https://update.code.visualstudio.com/1.142.0/linux-x64/stable"
+sha256 = "fcc1ccb435685adcc748287bbde524589569deedb6b4ad5560071583cbe00ae0"
+archive = "tar.gz"
+strip_components = 0
+
+[build]
+system = "prebuilt"
+
+[install.launchers]
+code = "code"
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.arm64.source]
+url = "https://update.code.visualstudio.com/1.142.0/linux-arm64/stable"
+sha256 = "cb4ce5183a29b1a13aeb6409d5430c896fa35aad21097be1f874fbb4cf1e7e62"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.linux.arm64.install.launchers]
+code = "code"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.x86_64.source]
+url = "https://vscode.download.prss.microsoft.com/dbazure/download/stable/6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1/VSCode-darwin-x64.dmg"
+sha256 = "de11c6fc9274a2e8a657b441ed65aea509fa2ecb708871d46f511553f56a9fb8"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.x86_64.install.launchers]
+code = "Visual Studio Code.app"
+
+[platform.macos.arm64.source]
+url = "https://vscode.download.prss.microsoft.com/dbazure/download/stable/6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1/VSCode-darwin-arm64.dmg"
+sha256 = "ac04774aeba3fd7110c92833d9195146d5086427bab2ca902200e7ad9f018a9e"
+archive = "dmg"
+strip_components = 0
+
+[platform.macos.arm64.install.launchers]
+code = "Visual Studio Code.app"
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://update.code.visualstudio.com/1.142.0/win32-x64-archive/stable"
+sha256 = "ace1da7d1432d43c1ab4b2bbf643f6494f6d25dec07494976755eac522cd50d9"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install.launchers]
+code = "Code.exe"
+
+[platform.windows.arm64.source]
+url = "https://update.code.visualstudio.com/1.142.0/win32-arm64-archive/stable"
+sha256 = "06e1323f2cfa095c371ebbe0f33f3da3c19ea266ea6999a4e7f25329b787d645"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install.launchers]
+code = "Code.exe"
