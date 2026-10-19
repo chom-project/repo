@@ -1,0 +1,29 @@
+format = 1
+name = "lyric-cli"
+version = "1.0.0"
+description = "Print a random lyric from your configured artists."
+license = "MIT"
+homepage = "https://github.com/JustOMORI7/lyric-cli"
+platforms = ["macos"]
+architectures = ["arm64", "x86_64"]
+dependencies = ["requests==2.32.5", "pykakasi==2.3.0"]
+
+[source]
+url = "https://codeload.github.com/JustOMORI7/lyric-cli/tar.gz/ff308b6ad0999934b1c9ae0f5ec953598f00dd25"
+sha256 = "1042e87202521bab96bc0290bdd65d64f25f857202e0c39bd055aec8d8f1991f"
+archive = "tar.gz"
+strip_components = 1
+
+[build]
+system = "python"
+
+[install]
+script = "main.py"
+command = "lyric-cli"
+config_path = ".config/lyric-cli/config.json"
+config_content = """
+{
+  "artists": ["natori", "Creepy Nuts", "Imagine Dragons"],
+  "romaji": true
+}
+"""
