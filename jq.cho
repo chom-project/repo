@@ -4,7 +4,7 @@ version = "1.8.2"
 description = "Lightweight and flexible command-line JSON processor."
 license = "MIT"
 homepage = "https://github.com/jqlang/jq"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -61,3 +61,24 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 jq = "jq-macos-arm64"
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-windows-amd64.exe"
+sha256 = "a6fc67fedaf9128a3309a1e2ebb8b986aeccf70122ee46d2cb4849e423f0c627"
+archive = "none"
+strip_components = 0
+
+[platform.windows.x86_64.install.launchers]
+jq = "jq-windows-amd64.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-windows-arm64.exe"
+sha256 = "083b5377392bc57cf27052b6d20a2d927770683bca844632901ff38b4b7b0ac7"
+archive = "none"
+strip_components = 0
+
+[platform.windows.arm64.install.launchers]
+jq = "jq-windows-arm64.exe"

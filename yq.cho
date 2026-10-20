@@ -4,7 +4,7 @@ version = "4.54.1"
 description = "Portable command-line YAML, JSON, XML, CSV, TOML and properties processor"
 license = "MIT"
 homepage = "https://github.com/mikefarah/yq"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -61,3 +61,24 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 "yq" = "yq_darwin_arm64"
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/mikefarah/yq/releases/download/v4.54.1/yq_windows_amd64.exe"
+sha256 = "b645f47ebb3a0d2fbab52998550bbd0a1706f23b5ca5f5b48e638c580bb70928"
+archive = "none"
+strip_components = 0
+
+[platform.windows.x86_64.install.launchers]
+yq = "yq_windows_amd64.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/mikefarah/yq/releases/download/v4.54.1/yq_windows_arm64.exe"
+sha256 = "c46a295a98c31173e72220da7c35f86fbcc1c2cd2da5188105f326b32585e984"
+archive = "none"
+strip_components = 0
+
+[platform.windows.arm64.install.launchers]
+yq = "yq_windows_arm64.exe"

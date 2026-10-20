@@ -4,7 +4,7 @@ version = "2.102.0"
 description = "GitHub’s official command-line tool."
 license = "MIT"
 homepage = "https://github.com/cli/cli"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -49,3 +49,30 @@ sha256 = "da922c20d1792e5b2cbf375593d7a658acf034c12c84e007e71c76ef959c337e"
 archive = "zip"
 strip_components = 1
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_windows_amd64.zip"
+sha256 = "ae64e556ecc240b200f7eba60d550e4bb60d78e860e69dd88c449405b86067f4"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+gh = "bin/gh.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_windows_arm64.zip"
+sha256 = "5dcf12aa8525eabd0c46ec414f323ab6cf65229fc2cd46543cc705001bbaf223"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install]
+binaries = []
+
+[platform.windows.arm64.install.launchers]
+gh = "bin/gh.exe"

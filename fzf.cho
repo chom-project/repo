@@ -4,7 +4,7 @@ version = "0.74.5"
 description = "Fuzzy finder for the command line."
 license = "MIT"
 homepage = "https://github.com/junegunn/fzf"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -49,3 +49,30 @@ sha256 = "ada808c7401b9949ce8842274ac16a6b6193fd32dcada396884a6a9a89e5985a"
 archive = "tar"
 strip_components = 0
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-windows_amd64.zip"
+sha256 = "01f854ec8b9b47c99a7d78023638f7d2056cfb0af56b72dabd112032eed3993e"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+fzf = "fzf.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-windows_arm64.zip"
+sha256 = "45d8f69b7660ac0c59118c9ccaccdea305d56fdd74a3599aa357cbb374ebd61e"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install]
+binaries = []
+
+[platform.windows.arm64.install.launchers]
+fzf = "fzf.exe"

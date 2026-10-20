@@ -4,7 +4,7 @@ version = "158.0"
 description = "Free web browser from Mozilla."
 license = "MPL-2.0"
 homepage = "https://www.mozilla.org/firefox/"
-platforms = ["macos"]
+platforms = ["macos", "linux"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -40,3 +40,24 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 "firefox" = "Firefox.app"
 
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.x86_64.source]
+url = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/158.0/linux-x86_64/en-US/firefox-158.0.tar.xz"
+sha256 = "9549b054ec4cf85f50f6a19d8c6fb79580312e71ebc4ec2cb217ec9af09dc12a"
+archive = "tar.xz"
+strip_components = 0
+
+[platform.linux.x86_64.install.launchers]
+firefox = "firefox/firefox"
+
+[platform.linux.arm64.source]
+url = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/158.0/linux-aarch64/en-US/firefox-158.0.tar.xz"
+sha256 = "ad647ee920828da7495de7a5f3eb5ddad457b107e4932b3fac49ce700bbbb2b2"
+archive = "tar.xz"
+strip_components = 0
+
+[platform.linux.arm64.install.launchers]
+firefox = "firefox/firefox"

@@ -4,7 +4,7 @@ version = "0.66.2"
 description = "Simple terminal UI for git commands."
 license = "MIT"
 homepage = "https://github.com/jesseduffield/lazygit"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -49,3 +49,30 @@ sha256 = "fadda59ae7665ba556fcbaa704c7eade6e40d016d3f3b25d6327dd1f3f906a0c"
 archive = "tar.gz"
 strip_components = 0
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.66.2/lazygit_0.66.2_windows_x86_64.zip"
+sha256 = "8b1e2194c2d8ac660f0a132cb4384e9d2fe1405217a144e280df16383c18d45c"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+lazygit = "lazygit.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.66.2/lazygit_0.66.2_windows_arm64.zip"
+sha256 = "1da981a35ed26231d01c6cd8cccc016f365b78d6235a3d7906334719f580e851"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install]
+binaries = []
+
+[platform.windows.arm64.install.launchers]
+lazygit = "lazygit.exe"

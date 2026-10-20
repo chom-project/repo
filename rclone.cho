@@ -4,7 +4,7 @@ version = "1.75.2"
 description = "Command-line program to manage files on cloud storage"
 license = "MIT"
 homepage = "https://github.com/rclone/rclone"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -61,3 +61,30 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 "rclone" = "rclone-v1.75.2-osx-arm64/rclone"
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/rclone/rclone/releases/download/v1.75.2/rclone-v1.75.2-windows-amd64.zip"
+sha256 = "8a9db2bad1dc79a65b3348fd857069598e2aab7cf4d118b77b1df23055aff818"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+rclone = "rclone-v1.75.2-windows-amd64/rclone.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/rclone/rclone/releases/download/v1.75.2/rclone-v1.75.2-windows-arm64.zip"
+sha256 = "7eb9844c9e5b723b9ef28821891caa17f6d9d1a375c49365cbe04114cec8dcd9"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install]
+binaries = []
+
+[platform.windows.arm64.install.launchers]
+rclone = "rclone-v1.75.2-windows-arm64/rclone.exe"

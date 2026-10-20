@@ -4,7 +4,7 @@ version = "2.8.0"
 description = "Executes commands in response to file changes"
 license = "Apache-2.0 OR MIT"
 homepage = "https://github.com/watchexec/watchexec"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -61,3 +61,30 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 "watchexec" = "watchexec-2.8.0-aarch64-apple-darwin/watchexec"
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/watchexec/watchexec/releases/download/v2.8.0/watchexec-2.8.0-x86_64-pc-windows-msvc.zip"
+sha256 = "0c872fc18c8e801f21614c6daf2504a5826d5c705bb67f7a583d879f5410d9ea"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+watchexec = "watchexec-2.8.0-x86_64-pc-windows-msvc/watchexec.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/watchexec/watchexec/releases/download/v2.8.0/watchexec-2.8.0-aarch64-pc-windows-msvc.zip"
+sha256 = "a000915bba72226fc9cebb028f28fb407a333cafcb99856428e79555eab483af"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install]
+binaries = []
+
+[platform.windows.arm64.install.launchers]
+watchexec = "watchexec-2.8.0-aarch64-pc-windows-msvc/watchexec.exe"

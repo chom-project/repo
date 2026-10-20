@@ -4,7 +4,7 @@ version = "1.59.0"
 description = "Handy way to save and run project-specific commands"
 license = "CC0-1.0"
 homepage = "https://github.com/casey/just"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -61,3 +61,30 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 "just" = "just"
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/casey/just/releases/download/1.59.0/just-1.59.0-x86_64-pc-windows-msvc.zip"
+sha256 = "9c5463e2d0974e31bee71346aa5cbf19167de1585a4abc1bae7b3b04604ea9c0"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+just = "just.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/casey/just/releases/download/1.59.0/just-1.59.0-aarch64-pc-windows-msvc.zip"
+sha256 = "a72808bc8f8028c25aaae87cf26405d2bd85d2769a779380b344c69607216971"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install]
+binaries = []
+
+[platform.windows.arm64.install.launchers]
+just = "just.exe"

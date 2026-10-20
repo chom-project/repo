@@ -4,7 +4,7 @@ version = "10.5.0"
 description = "User-friendly and fast alternative to find."
 license = "Apache-2.0 OR MIT"
 homepage = "https://github.com/sharkdp/fd"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -49,3 +49,30 @@ sha256 = "b67e1836c468e42e411984b56e52fa7abec08c2bd22c867398e7cc134aac5e12"
 archive = "tar"
 strip_components = 1
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-x86_64-pc-windows-msvc.zip"
+sha256 = "a227701b8551c35a9931d9f6da75503cf86d88e182d71fb849a70864c5d57cd7"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+fd = "fd-v10.5.0-x86_64-pc-windows-msvc/fd.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-aarch64-pc-windows-msvc.zip"
+sha256 = "a2bcddcfd259b05357a77bbc6cd671fdb30f63fd266a0e748305890a8c5ceaa6"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install]
+binaries = []
+
+[platform.windows.arm64.install.launchers]
+fd = "fd-v10.5.0-aarch64-pc-windows-msvc/fd.exe"

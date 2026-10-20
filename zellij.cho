@@ -4,7 +4,7 @@ version = "0.45.1"
 description = "Terminal workspace with batteries included"
 license = "MIT"
 homepage = "https://github.com/zellij-org/zellij"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -61,3 +61,18 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 "zellij" = "zellij"
 
+
+[platform.windows]
+architectures = ["x86_64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/zellij-org/zellij/releases/download/v0.45.1/zellij-no-web-x86_64-pc-windows-msvc.zip"
+sha256 = "e4684687ebabdaf5fba416df3db818f359c05b7121e949b62f9bf04984798919"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+zellij = "zellij.exe"

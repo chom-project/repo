@@ -4,7 +4,7 @@ version = "15.2.0"
 description = "Fast recursive regular-expression search that respects gitignore rules."
 license = "MIT OR Unlicense"
 homepage = "https://github.com/BurntSushi/ripgrep"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -49,3 +49,30 @@ sha256 = "3750b2e93f37e0c692657da574d7019a101c0084da05a790c83fd335bad973e4"
 archive = "tar"
 strip_components = 1
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-pc-windows-msvc.zip"
+sha256 = "71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aafc5"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+rg = "ripgrep-15.2.0-x86_64-pc-windows-msvc/rg.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-pc-windows-msvc.zip"
+sha256 = "e4abca10c3a64ebea742667dd7009449d49403db5460dd6873e389fa2945360f"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install]
+binaries = []
+
+[platform.windows.arm64.install.launchers]
+rg = "ripgrep-15.2.0-aarch64-pc-windows-msvc/rg.exe"

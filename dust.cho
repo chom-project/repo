@@ -4,7 +4,7 @@ version = "1.2.6"
 description = "Intuitive disk-usage analyzer for the terminal."
 license = "Apache-2.0 OR MIT"
 homepage = "https://github.com/bootandy/dust"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -49,3 +49,30 @@ sha256 = "5c37ee0d353165c73aedd6b21b9133182221efe08f9a5e76c082d9d6d5a0935d"
 archive = "tar.gz"
 strip_components = 1
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/bootandy/dust/releases/download/v1.2.6/dust-v1.2.6-x86_64-pc-windows-msvc.zip"
+sha256 = "6a73222902d6960ce7183cd833a5d3ea99a3e3ff3cfb33720c1939a41cb7744d"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+dust = "dust-v1.2.6-x86_64-pc-windows-msvc/dust.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/bootandy/dust/releases/download/v1.2.6/dust-v1.2.6-aarch64-pc-windows-msvc.zip"
+sha256 = "43b14b97245452e8dd5506ab5fdc996ddd51c2f820c936d45210d3253b613062"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install]
+binaries = []
+
+[platform.windows.arm64.install.launchers]
+dust = "dust-v1.2.6-aarch64-pc-windows-msvc/dust.exe"

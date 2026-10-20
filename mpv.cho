@@ -4,7 +4,7 @@ version = "0.41.0"
 description = "Free, open-source media player."
 license = "GPL-2.0-or-later"
 homepage = "https://mpv.io/"
-platforms = ["windows"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -40,3 +40,40 @@ strip_components = 0
 [platform.windows.arm64.install.launchers]
 "mpv" = "mpv.exe"
 
+
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.source]
+url = "https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz"
+sha256 = "ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209"
+archive = "tar.gz"
+strip_components = 1
+
+[platform.linux.build]
+system = "meson"
+configure_args = ["setup", ".chom-build", "--prefix", "{prefix}", "--buildtype=release"]
+build_args = ["compile", "-C", ".chom-build"]
+install_args = ["install", "-C", ".chom-build"]
+
+[platform.linux.install.launchers]
+mpv = "bin/mpv"
+
+[platform.macos]
+architectures = ["x86_64", "arm64"]
+
+[platform.macos.source]
+url = "https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz"
+sha256 = "ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209"
+archive = "tar.gz"
+strip_components = 1
+
+[platform.macos.build]
+system = "meson"
+configure_args = ["setup", ".chom-build", "--prefix", "{prefix}", "--buildtype=release"]
+build_args = ["compile", "-C", ".chom-build"]
+install_args = ["install", "-C", ".chom-build"]
+
+[platform.macos.install.launchers]
+mpv = "bin/mpv"

@@ -4,7 +4,7 @@ version = "0.26.2"
 description = "Friendly and fast tool for sending HTTP requests"
 license = "MIT"
 homepage = "https://github.com/ducaale/xh"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -61,3 +61,18 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 "xh" = "xh-v0.26.2-aarch64-apple-darwin/xh"
 
+
+[platform.windows]
+architectures = ["x86_64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/ducaale/xh/releases/download/v0.26.2/xh-v0.26.2-x86_64-pc-windows-msvc.zip"
+sha256 = "7907c1ef225382fb5955c8274aa23e31b70622c4d39dbc76cf945dc8ce15a78d"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+xh = "xh-v0.26.2-x86_64-pc-windows-msvc/xh.exe"

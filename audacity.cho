@@ -4,7 +4,7 @@ version = "4.0.1"
 description = "Free audio editor and recorder."
 license = "GPL-3.0-or-later"
 homepage = "https://www.audacityteam.org/"
-platforms = ["macos"]
+platforms = ["macos", "linux"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -40,3 +40,24 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 "audacity" = "Audacity 4.app"
 
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.x86_64.source]
+url = "https://github.com/audacity/audacity/releases/download/Audacity-4.0.1/audacity-linux-4.0.1-x86_64.AppImage"
+sha256 = "ca2f04f172124d1f18ac608749854c5d31f04ab266a758c348190c05d9b2087c"
+archive = "none"
+strip_components = 0
+
+[platform.linux.x86_64.install.launchers]
+audacity = "audacity-linux-4.0.1-x86_64.AppImage"
+
+[platform.linux.arm64.source]
+url = "https://github.com/audacity/audacity/releases/download/Audacity-4.0.1/audacity-linux-4.0.1-aarch64.AppImage"
+sha256 = "3abc517f26f00197eaac9c4e56b35dc53d8e933764b41077950e8526cd4aa075"
+archive = "none"
+strip_components = 0
+
+[platform.linux.arm64.install.launchers]
+audacity = "audacity-linux-4.0.1-aarch64.AppImage"

@@ -4,7 +4,7 @@ version = "0.23.5"
 description = "Modern replacement for ls with colors, icons, and Git awareness."
 license = "MIT"
 homepage = "https://github.com/eza-community/eza"
-platforms = ["linux"]
+platforms = ["linux", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -34,3 +34,18 @@ sha256 = "40b87ae8628aa2ff0f0d2dc24ab52f689631366385c3da630bae745671fd71ec"
 archive = "tar"
 strip_components = 0
 
+
+[platform.windows]
+architectures = ["x86_64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza.exe_x86_64-pc-windows-gnu.zip"
+sha256 = "c830638c844a5b89d39ba662b5549903a71fa539018e813880f5b8afa77bac2e"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+eza = "eza.exe"

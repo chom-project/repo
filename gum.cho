@@ -4,7 +4,7 @@ version = "2.0.2"
 description = "Tool for glamorous shell scripts"
 license = "MIT"
 homepage = "https://github.com/charmbracelet/gum"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -61,3 +61,18 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 "gum" = "gum_2.0.2_Darwin_arm64/gum"
 
+
+[platform.windows]
+architectures = ["x86_64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/charmbracelet/gum/releases/download/v2.0.2/gum_2.0.2_Windows_x86_64.zip"
+sha256 = "0397091dec9b4e8f00e02b90fd3eb07bf45acabbdb61d67437950f18e03a8b79"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+gum = "gum_2.0.2_Windows_x86_64/gum.exe"

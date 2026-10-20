@@ -4,7 +4,7 @@ version = "1.1.0"
 description = "Intuitive find-and-replace command-line tool"
 license = "MIT"
 homepage = "https://github.com/chmln/sd"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -61,3 +61,18 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 "sd" = "sd-v1.1.0-aarch64-apple-darwin/sd"
 
+
+[platform.windows]
+architectures = ["x86_64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/chmln/sd/releases/download/v1.1.0/sd-v1.1.0-x86_64-pc-windows-msvc.zip"
+sha256 = "59837c2e7c911099aca1cc46b663bcdc5a949fd3e9fbbaf34fc73e5d5d71007c"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+sd = "sd-v1.1.0-x86_64-pc-windows-msvc/sd.exe"

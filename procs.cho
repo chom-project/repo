@@ -4,7 +4,7 @@ version = "0.14.12"
 description = "Modern replacement for ps"
 license = "MIT"
 homepage = "https://github.com/dalance/procs"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -61,3 +61,18 @@ strip_components = 0
 [platform.macos.arm64.install.launchers]
 "procs" = "procs"
 
+
+[platform.windows]
+architectures = ["x86_64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/dalance/procs/releases/download/v0.14.12/procs-v0.14.12-x86_64-windows.zip"
+sha256 = "4928c399ae78ee82f99139a5629077b8d90a58599d834584dd4e613cb60c83d0"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+procs = "procs.exe"

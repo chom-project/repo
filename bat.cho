@@ -4,7 +4,7 @@ version = "0.26.1"
 description = "Cat clone with syntax highlighting and Git integration."
 license = "Apache-2.0 OR MIT"
 homepage = "https://github.com/sharkdp/bat"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -49,3 +49,30 @@ sha256 = "e30beff26779c9bf60bb541e1d79046250cb74378f2757f8eb250afddb19e114"
 archive = "tar"
 strip_components = 1
 
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-pc-windows-msvc.zip"
+sha256 = "0f729b4b6f5f28d395c641eacc2e9ff68d0096b85aa0eec344aa62425144b69b"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.x86_64.install]
+binaries = []
+
+[platform.windows.x86_64.install.launchers]
+bat = "bat-v0.26.1-x86_64-pc-windows-msvc/bat.exe"
+
+[platform.windows.arm64.source]
+url = "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-aarch64-pc-windows-msvc.zip"
+sha256 = "af07dd1939e99f7f5892d197fc5653cb8cb6c5999552731135ad156eca7e38a5"
+archive = "zip"
+strip_components = 0
+
+[platform.windows.arm64.install]
+binaries = []
+
+[platform.windows.arm64.install.launchers]
+bat = "bat-v0.26.1-aarch64-pc-windows-msvc/bat.exe"
