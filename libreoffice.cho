@@ -4,7 +4,7 @@ version = "26.8.1"
 description = "Free office suite for documents, spreadsheets, and presentations."
 license = "MPL-2.0"
 homepage = "https://www.libreoffice.org/"
-platforms = ["macos"]
+platforms = ["macos", "linux", "windows"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -39,3 +39,36 @@ strip_components = 0
 
 [platform.macos.arm64.install.launchers]
 "libreoffice" = "LibreOffice.app"
+
+[platform.linux]
+architectures = ["x86_64"]
+
+[platform.linux.source]
+url = "https://download.documentfoundation.org/libreoffice/stable/26.8.1/deb/x86_64/LibreOffice_26.8.1_Linux_x86-64_deb.tar.gz"
+sha256 = "30903df3b9f61360d9660cd707de48cd2831469114492a5008ed58a0ac77d044"
+archive = "deb-bundle"
+strip_components = 1
+
+[platform.linux.install.launchers]
+libreoffice = "opt/libreoffice26.8/program/soffice"
+
+[platform.windows]
+architectures = ["x86_64", "arm64"]
+
+[platform.windows.x86_64.source]
+url = "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/x86_64/LibreOffice_26.8.1_Win_x86-64.msi"
+sha256 = "c6298b10cfa1748bcbedad94c62ce771e240e5021bfd6d7a967cd571b04b5312"
+archive = "msi"
+strip_components = 0
+
+[platform.windows.x86_64.install.launchers]
+libreoffice = "program/soffice.exe"
+
+[platform.windows.arm64.source]
+url = "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/aarch64/LibreOffice_26.8.1_Win_aarch64.msi"
+sha256 = "97c2173752325af1da3d8731f41c8e09a7c4ad491cf55d9b1069fadb5668e6d7"
+archive = "msi"
+strip_components = 0
+
+[platform.windows.arm64.install.launchers]
+libreoffice = "program/soffice.exe"
