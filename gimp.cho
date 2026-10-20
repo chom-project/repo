@@ -4,7 +4,7 @@ version = "3.2.6"
 description = "Free image editor."
 license = "GPL-3.0-or-later"
 homepage = "https://www.gimp.org/"
-platforms = ["macos"]
+platforms = ["macos", "linux"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -39,3 +39,22 @@ strip_components = 0
 
 [platform.macos.arm64.install.launchers]
 "gimp" = "GIMP.app"
+
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.source]
+url = "https://download.gimp.org/gimp/v3.2/gimp-3.2.6.tar.xz"
+sha256 = "40b15e90ad0c0c631b76da3c467ea9847fa5c24f37413ac5b492804860a28cd8"
+archive = "tar.xz"
+strip_components = 1
+
+[platform.linux.build]
+system = "meson"
+configure_args = ["setup", ".chom-build", "--buildtype=release"]
+build_args = ["compile", "-C", ".chom-build"]
+install_args = ["install", "-C", ".chom-build"]
+
+[platform.linux.install.launchers]
+gimp = "bin/gimp-3.0"

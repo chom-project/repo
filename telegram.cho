@@ -4,7 +4,7 @@ version = "13.0.283305"
 description = "Fast, cloud-based messaging app."
 license = "Proprietary"
 homepage = "https://macos.telegram.org/"
-platforms = ["macos"]
+platforms = ["macos", "linux"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -39,3 +39,17 @@ strip_components = 0
 
 [platform.macos.arm64.install.launchers]
 "telegram" = "Telegram.app"
+
+
+[platform.linux]
+version = "7.3.1"
+architectures = ["x86_64"]
+
+[platform.linux.source]
+url = "https://td.telegram.org/linux-x64/td-setup-linux-x64-7.3.1.tar.xz"
+sha256 = "654a5b266d653b072b4407a4644bd441e37ee393f502c71b2e1d86fc115b8ab6"
+archive = "tar.xz"
+strip_components = 1
+
+[platform.linux.install.launchers]
+telegram = "Telegram"

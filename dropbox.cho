@@ -4,7 +4,7 @@ version = "274.4.4905"
 description = "File sync and cloud storage client."
 license = "Proprietary"
 homepage = "https://www.dropbox.com/"
-platforms = ["macos"]
+platforms = ["macos", "linux"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -39,3 +39,17 @@ strip_components = 0
 
 [platform.macos.arm64.install.launchers]
 "dropbox" = "Dropbox.app"
+
+
+[platform.linux]
+version = "274.4.4905"
+architectures = ["x86_64"]
+
+[platform.linux.source]
+url = "https://edge.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86_64-274.4.4905.tar.gz"
+sha256 = "c450ec3e659a4ab556b73304e075d2a5655faf891e085ad178e4282c727ec96a"
+archive = "tar.gz"
+strip_components = 0
+
+[platform.linux.install.launchers]
+dropbox = ".dropbox-dist/dropboxd"

@@ -4,7 +4,7 @@ version = "0.0.416"
 description = "Voice, video, and text chat app."
 license = "Proprietary"
 homepage = "https://discord.com/"
-platforms = ["macos"]
+platforms = ["macos", "linux"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -31,3 +31,16 @@ strip_components = 0
 [platform.macos.x86_64.install.launchers]
 "discord" = "Discord.app"
 
+
+[platform.linux]
+version = "1.0.164"
+architectures = ["x86_64"]
+
+[platform.linux.source]
+url = "https://stable.dl2.discordapp.net/apps/linux/1.0.164/discord-1.0.164.tar.gz"
+sha256 = "e1d327dda80df6259fe19649d4ebd3b51328b680f15a411c8a7bac57a692e7ae"
+archive = "tar.gz"
+strip_components = 1
+
+[platform.linux.install.launchers]
+discord = "discord"

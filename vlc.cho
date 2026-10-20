@@ -4,7 +4,7 @@ version = "3.0.24"
 description = "Free and open-source multimedia player."
 license = "GPL-2.0-or-later"
 homepage = "https://www.videolan.org/vlc/"
-platforms = ["macos", "windows"]
+platforms = ["macos", "windows", "linux"]
 architectures = ["x86_64", "arm64"]
 
 [source]
@@ -52,3 +52,22 @@ strip_components = 0
 [platform.windows.x86_64.install.launchers]
 "vlc" = "vlc-3.0.24/vlc.exe"
 
+
+
+[platform.linux]
+architectures = ["x86_64", "arm64"]
+
+[platform.linux.source]
+url = "https://get.videolan.org/vlc/3.0.24/vlc-3.0.24.tar.xz"
+sha256 = "e7cab503d1d7d5849b89d2cf0e1ee60d0ef6d012407791b644b9cfc0cc225fdf"
+archive = "tar.xz"
+strip_components = 1
+
+[platform.linux.build]
+system = "autotools"
+configure_args = ["--disable-nls"]
+build_args = ["-j2"]
+install_args = ["-j2"]
+
+[platform.linux.install.launchers]
+vlc = "bin/vlc"
